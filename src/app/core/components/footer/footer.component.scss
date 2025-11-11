@@ -1,0 +1,28 @@
+.cta {
+    position: fixed;
+    bottom: 1rem;
+    right: -15%;
+    top: 20%;
+
+    transform: translateX(-50%);
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    
+}
+
+.buttonlink {
+    border-color: transparent;
+    font-family: var(--font-primary);
+    color: aliceblue;
+    width: 152px;
+    height: 48px;
+    background-color: var(--button);
+    box-shadow:  2px 2px 2px var(--black);
+    text-emphasis-color: inherit;
+}
+
+.buttonlink:hover {
+    transform:  scale(1.1);
+     color: var(--golden-yellow);
+}

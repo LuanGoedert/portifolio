@@ -1,0 +1,182 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px auto;
+  border: 3px solid var(--golden-yellow);
+  background: var(--blue-background);
+  min-height: 180px;
+  align-items: center;
+  padding: 10px;
+  max-width: 1100px;
+  ::shadow {
+    box-shadow: var(--shadow)
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: var(--golden-yellow);
+  flex: 1;
+  margin-top: 10px;
+
+  ::shadow {
+    text-shadow: var(--shadow)
+  }
+}
+
+.link {
+  display: inline-flex;
+  font-family: var(--green1);
+  padding: 8px 12px;
+  color: var(--green1);
+  transition: transform 0.2s ease;
+}
+
+.link:hover {
+  opacity: 1;
+  color: var(--yellow);
+  transform: scale(1.5);
+}
+
+.left img {
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  object-fit: cover;
+  border: 2px solid var(--golden-yellow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  ::shadow {
+    box-shadow: var(--shadow)
+  }
+}
+
+.middle {
+  flex: 1;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagline {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--green2);
+  //animation: crt-flicker .5s infinite;
+
+  ::shadow {
+    text-shadow: var(--shadow-minor)
+  }
+
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.name {
+  font-family: var(--font-family);
+  color: var(--golden-yellow);
+
+  ::shadow {
+    text-shadow: var(--shadow)
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* needed for absolute positioning of tooltip */
+  cursor: help;
+  /* shows help cursor on hover */
+
+  .tooltip {
+    position: absolute;
+    flex-direction: column;
+    background: var(--blue-background);
+    color: var(--golden-yellow);
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    bottom: -100;
+    /* Position below the component */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s, visibility 0.3s;
+    border: 1px solid var(--golden-yellow);
+    box-shadow: var(--shadow);
+    z-index: 1;
+
+    /* Add a small arrow pointing up */
+    &::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 0 8px 8px 8px;
+      border-style: solid;
+      border-color: transparent transparent var(--golden-yellow) transparent;
+    }
+  }
+
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  align-items: flex-start;
+  align-self: flex-start;
+  /* align to top of container */
+  /* add some space from the top edge */
+  gap: 10px;
+  width: auto;
+  font-size: 10px;
+  color: var(--green2);
+  margin:15px;
+
+  ::shadow {
+    text-shadow: var(--shadow-minor)
+  }
+
+  background-color: var(--darker-blue-background);
+  border: 2px solid var(--golden-yellow);
+  border-style: dashed;
+  min-height: max-content;
+  padding: 10px;
+
+  &:hover {
+    box-shadow: 0 0 12px #ffaa00, inset 0 0 4px #ffaa00;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes crt-flicker {
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+
+  20%,
+  24%,
+  55% {
+    opacity: 0.4;
+  }
+}
