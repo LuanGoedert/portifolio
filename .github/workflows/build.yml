@@ -24,3 +24,13 @@ jobs:
 
       - name: Build Angular App
         run: npm run build
+        
+      - name: Show Angular error log on failure
+        if: failure()
+        run: |
+          ls -R /tmp
+          if ls /tmp/ng-* 1> /dev/null 2>&1; then
+            cat /tmp/ng-*/angular-errors.log || echo "No angular-errors.log file"
+          else
+            echo "No /tmp/ng-* folder found"
+          fi
