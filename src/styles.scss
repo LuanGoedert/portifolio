@@ -1,30 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-  --bg: #111315;
-  --panel: rgba(255, 255, 255, 0.06);
-  --text: #e7e7e7;
-  --muted: #b7b7b7;
-  --accent: #c8b27f;
   --font-primary: 'Press Start 2P', monospace;
   --black: #000000;
   --green4: #204829;
   --green3: #22b455;
   --green2: #80ce87;
-  --yellow: #ffff99;
   --blue-background2: #040e41;
   --blue-background: #1f2750; // card background
   --darker-blue-background: #0b0e12; // page background
   --dark-gray: #2a2a2a; // section background
   --brownish-orange: #903f17; // background for code great titles
   --golden-yellow: #f8cb38; // for great titles
-  --back-shade: #07080b;
-  --light-gray: #ededed8b;
   --shadow: 3px 3px 3px var(--brownish-orange);
   --shadow-minor: 2px 2px 2px var(--brownish-orange);
   --shadow-major: 4px 4px 4px var(--brownish-orange);
   --button: #22c55E;
-  --border: #ededed;
   --white: #ffffff;
 
 
