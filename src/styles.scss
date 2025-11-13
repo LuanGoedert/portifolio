@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
+  --bg: #111315;
+  --text: #e7e7e7;
   --font-primary: 'Press Start 2P', monospace;
   --black: #000000;
   --green4: #204829;
   --green3: #22b455;
   --green2: #80ce87;
+  --yellow: #ffff99;
   --blue-background2: #040e41;
   --blue-background: #1f2750; // card background
   --darker-blue-background: #0b0e12; // page background
@@ -17,8 +20,6 @@
   --shadow-major: 4px 4px 4px var(--brownish-orange);
   --button: #22c55E;
   --white: #ffffff;
-
-
 }
 
 html {
@@ -46,31 +47,6 @@ a {
 }
 
 //shared
-.description {
-    border: 2px solid var(--golden-yellow);
-    border-style: double;
-    display: inline-flex;
-    flex-direction: column;
-    text-align: left;
-    width: auto;
-    font-size: auto;
-    min-height: max-content;
-    padding: 5px;
-    -webkit-text-stroke: .7px var(--dark-gray);
-    background-color: var(--blue-background);
-}
-
-.description h3 {
-    max-width: fit-content;
-    color: var(--golden-yellow);
-    font-family: var(--font-primary);
-    margin-bottom: 5px;
-    -webkit-text-stroke: 0;
-    ::shadow {
-        text-shadow: var(--shadow)
-    }
-}
-
 
 .buttonlink {
   border: 3px solid var(--black);
@@ -93,5 +69,47 @@ a {
   display: flex;
   gap: 20px;
   justify-content: start;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
+.description {
+  border: 2px solid var(--golden-yellow);
+  border-style: double;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+  width: auto;
+  font-size: 16px;
+  min-height: max-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--blue-background);
+  -webkit-text-stroke: .7px var(--dark-gray);
+}
+
+.description h3 {
+  max-width: fit-content;
+  color: var(--golden-yellow);
+  font-family: var(--font-primary);
+  margin-bottom: 5px;
+  -webkit-text-stroke: 0;
+  text-shadow: var(--shadow);
+}
+
+.description h1 {
+  max-width: fit-content;
+  color: var(--golden-yellow);
+  font-family: var(--font-primary);
+  margin-bottom: 5px;
+  -webkit-text-stroke: 0;
+  text-shadow: var(--shadow-major);
+}
+
+.title {
+  color: var(--golden-yellow);
+  max-width: fit-content;
+  text-shadow: var(--shadow);
+}
+
+// 

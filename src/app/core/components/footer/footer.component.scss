@@ -1,14 +1,9 @@
-.cta {
-    position: fixed;
+.bottom {
     bottom: 1rem;
-    right: -15%;
-    top: 20%;
-
-    transform: translateX(-50%);
+    left: 50%;
     display: flex;
     gap: 32px;
     justify-content: center;
-    
 }
 
 .buttonlink {
