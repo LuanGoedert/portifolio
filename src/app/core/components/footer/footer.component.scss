@@ -1,16 +1,9 @@
 .bottom {
-    text-align: center;
-    overflow-wrap: anywhere;
-    line-height: 1.6;
     bottom: 1rem;
     left: 50%;
     display: flex;
     gap: 32px;
     justify-content: center;
-}
-
-.bottom h2 {
-    font-size: clamp(12px, 2.5vw, 24px);
 }
 
 .buttonlink {
@@ -27,4 +20,9 @@
 .buttonlink:hover {
     transform:  scale(1.1);
      color: var(--golden-yellow);
+}
+
+@media (max-width: 1100px) {
+  .bottom { text-align: center; overflow-wrap: anywhere; line-height: 1.6; }
+  .bottom h2 { font-size: clamp(12px, 2.5vw, 24px); }
 }

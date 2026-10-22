@@ -8,11 +8,10 @@
 
 .chip {
   display: inline-block;
-  max-width: 100%;
   padding: 6px 12px;
   border: 1px solid var(--golden-yellow);
   border-style: double;
-  font-size: inherit;
+  font-size: auto;
   background-color: var(--darker-blue-background);
   transition: 0.2s;
   -webkit-text-stroke: .5px var(--dark-gray);
@@ -23,14 +22,13 @@
   }
 }
 
-@media (hover: none) {
-  .chip:hover {
-    transform: none;
-  }
-}
-
 .chip:hover {
   color: var(--golden-yellow);
   transform: scale(1.1);
   background-color: var(--green3);
+}
+
+@media (max-width: 1100px) {
+  .chip { max-width: 100%; }
+  .chip:hover { transform: none; }
 }

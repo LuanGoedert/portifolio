@@ -24,15 +24,12 @@
 
 /* Base NES-like input style */
 .nes-input {
-  width: 100%;
-  min-width: 0;
   color: var(--green2);
-  border: 3px solid var(--brownish-orange);
+  border: 3px solid (--brownish-orange);
   outline: none;
   padding: 8px 12px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 20px;
   background-color: var(--darker-blue-background);
   box-shadow: inset -3px -3px var(--darker-blue-background), inset 3px 3px var(--darker-blue-background);
   resize: none;
@@ -83,10 +80,7 @@
   font-family: var(--font-primary);
   color: var(--black);
   width: 152px;
-  min-height: 48px;
-  max-width: 100%;
-  padding: 8px;
-  line-height: 1.5;
+  height: 48px;
   background-color: var(--golden-yellow);
   box-shadow: 2px 2px 2px var(--black);
 }
@@ -98,9 +92,22 @@
   box-shadow: 5px 5px 5px var(--black);
 }
 
-@media (hover: none) {
-  .buttonsend:hover {
-    transform: none;
+@media (max-width: 1100px) {
+  .nes-input {
+    width: 100%;
+    min-width: 0;
+    border: 3px solid var(--golden-yellow);
+    font-size: 16px;
+    line-height: 1.6;
   }
-}
 
+  .buttonsend {
+    height: auto;
+    min-height: 48px;
+    max-width: 100%;
+    padding: 8px;
+    line-height: 1.5;
+  }
+
+  .buttonsend:hover { transform: none; }
+}
