@@ -8,10 +8,11 @@
 
 .chip {
   display: inline-block;
+  max-width: 100%;
   padding: 6px 12px;
   border: 1px solid var(--golden-yellow);
   border-style: double;
-  font-size: auto;
+  font-size: inherit;
   background-color: var(--darker-blue-background);
   transition: 0.2s;
   -webkit-text-stroke: .5px var(--dark-gray);
@@ -19,6 +20,12 @@
   ::shadow {
     box-shadow: var(--golden-yellow);
     text-shadow: var(--shadow-minor)
+  }
+}
+
+@media (hover: none) {
+  .chip:hover {
+    transform: none;
   }
 }
 

@@ -22,6 +22,12 @@
   --white: #ffffff;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -53,7 +59,10 @@ a {
   font-family: var(--font-primary);
   color: var(--black);
   width: 152px;
-  height: 48px;
+  min-height: 48px;
+  padding: 8px;
+  line-height: 1.5;
+  max-width: 100%;
   background-color: var(--green2);
   box-shadow: 2px 2px 2px var(--black);
 }
@@ -67,6 +76,7 @@ a {
 
 .cta {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: start;
   margin-top: 10px;
@@ -76,11 +86,14 @@ a {
 .description {
   border: 2px solid var(--golden-yellow);
   border-style: double;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   text-align: left;
-  width: auto;
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-size: 16px;
+  line-height: 1.7;
   min-height: max-content;
   padding-left: 10px;
   padding-right: 10px;
@@ -111,4 +124,37 @@ a {
   color: var(--golden-yellow);
   max-width: fit-content;
   text-shadow: var(--shadow);
+}
+
+@media (max-width: 640px) {
+  .description {
+    font-size: 12px;
+    padding: 0 12px;
+    -webkit-text-stroke: 0;
+  }
+
+  .description h3 {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .title {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .cta {
+    gap: 12px;
+  }
+
+  .cta > button {
+    flex: 1 1 140px;
+    font-size: 12px;
+  }
+}
+
+@media (hover: none) {
+  .buttonlink:hover {
+    transform: none;
+  }
 }

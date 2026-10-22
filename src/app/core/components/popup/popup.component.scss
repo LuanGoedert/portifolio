@@ -3,6 +3,9 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
+  max-width: calc(100% - 40px);
+  overflow-wrap: anywhere;
+  line-height: 1.6;
   padding: 12px 20px;
   background: var(--blue-background);
   color: var(--golden-yellow);
